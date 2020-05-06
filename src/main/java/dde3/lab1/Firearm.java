@@ -1,11 +1,15 @@
 package dde3.lab1;
 
-public class Firearm extends Weapon {
+public abstract class Firearm extends Weapon {
     private  double caliber;
 
     public Firearm(double weight, double price, double caliber) {
         super(weight, price);
         this.caliber = caliber;
+    }
+
+    public Firearm() {
+
     }
 
     public double getCaliber() {

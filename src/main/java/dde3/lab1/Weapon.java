@@ -1,12 +1,13 @@
 package dde3.lab1;
 
-public class Weapon {
+public abstract class Weapon {
     private double weight;
     private double price;
     public Weapon(double weight, double price) {
         this.weight = weight;
         this.price = price;
     }
+    public Weapon(){}
 
     public double getWeight() {
         return weight;

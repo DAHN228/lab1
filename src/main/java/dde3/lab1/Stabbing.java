@@ -2,6 +2,7 @@ package dde3.lab1;
 
 public class Stabbing extends ColdWeapon {
     private String name;
+
     public Stabbing(double weight, double price, double blade_length, String name) {
         super(weight, price, blade_length);
         this.name = name;

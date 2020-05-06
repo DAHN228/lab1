@@ -1,6 +1,6 @@
 package dde3.lab1;
 
-public class ColdWeapon extends Weapon {
+public abstract class ColdWeapon extends Weapon {
     private double  blade_length;
     public ColdWeapon(double weight, double price, double blade_length) {
         super(weight, price);

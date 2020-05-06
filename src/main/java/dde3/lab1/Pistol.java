@@ -8,6 +8,10 @@ public class Pistol extends Firearm {
 
     }
 
+    public Pistol() {
+        super();
+    }
+
     public String getModel() {
         return model;
     }
