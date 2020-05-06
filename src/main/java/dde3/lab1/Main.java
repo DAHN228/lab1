@@ -1,42 +1,12 @@
 package dde3.lab1;
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.Semaphore;
 
 public class Main {
-    public int numOfPistols = 0;
-    private  ArrayList<Pistol> pBox = new ArrayList<Pistol>();
-    public ArrayList<Pistol> getPistols()
-    {return pBox;}
-    public void addPistols(Pistol pistol)
-    {pBox.add(pistol);}
-
-   /* class AffableThread extends Thread
-    {
-        @Override
-        public void run()	//Этот метод будет выполнен в побочном потоке
-        {
-            System.out.println("Привет из побочного потока!");
-            for (int i = 0; i<10; i++) {
-                pBox.get(1);
-                numOfPistols--;
-            }
-        }
-    }
-    static AffableThread mSecondThread;
-
-        void thread1(){
-        for (int i = 0; i<10; i++)
-        {
-            pBox.add(new Pistol(0.81,5000, 9.0, "PM" ));
-            numOfPistols++;
-        }
-    }*/
     public static void main(String[] args) {
-       /* mSecondThread = new AffableThread();	//Создание потока
-        mSecondThread.start();					//Запуск потока
-        thread1();
-        System.out.println("Главный поток завершён...");
-*/
+
+        Semaphore sem = new Semaphore(1,false);
+
        PistolFactory pistolFactory = new PistolFactory();
        Pistol pistol = pistolFactory.createPistol();
 
@@ -54,7 +24,12 @@ public class Main {
         System.out.println(pm1.toString());
         System.out.println(pistol.toString());
 
+        Store pistolStore = new Store();
+        Thread1 thread1 = new Thread1(sem);
+        Thread2 thread2 = new Thread2(sem);
 
+        thread1.start();
+        thread2.start();
 
     }
 }
