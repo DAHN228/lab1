@@ -5,11 +5,10 @@ public class Chopping extends ColdWeapon {
     public Chopping(double weight, double price, double blade_length, String name) {
         super(weight, price, blade_length);
         this.name = name;
-
     }
 
-    public String getName() {
-        return name;
+    public Chopping() {
+        super();
     }
 
     @Override

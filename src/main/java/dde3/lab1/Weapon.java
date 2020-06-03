@@ -3,15 +3,19 @@ package dde3.lab1;
 public abstract class Weapon {
     private double weight;
     private double price;
-    public Weapon(double weight, double price) {
+    private String name;
+    public Weapon(double weight, double price, String name) {
         this.weight = weight;
         this.price = price;
+        this.name = name;
     }
-    public Weapon(){}
+    public Weapon(double weight, double price){}
 
-    public double getWeight() {
-        return weight;
+    public Weapon() {
+
     }
+    public String getName () {return name;}
+    public double getWeight() { return weight;}
 
     public void setWeight(double weight) {
         this.weight = weight;
@@ -25,11 +29,5 @@ public abstract class Weapon {
         this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return "weapon{" +
-                "weight=" + weight +
-                ", price=" + price +
-                '}';
-    }
+
 }

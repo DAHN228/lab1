@@ -9,12 +9,8 @@ public class Stabbing extends ColdWeapon {
 
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Stabbing() {
+        super();
     }
 
     @Override

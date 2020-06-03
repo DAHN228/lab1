@@ -7,6 +7,10 @@ public abstract class ColdWeapon extends Weapon {
         this.blade_length = blade_length;
     }
 
+    public ColdWeapon() {
+        super();
+    }
+
     public double getBlade_length() {
         return blade_length;
     }
@@ -15,10 +19,5 @@ public abstract class ColdWeapon extends Weapon {
         this.blade_length = blade_length;
     }
 
-    @Override
-    public String toString() {
-        return "ColdWeapon{" +
-                "blade_length=" + blade_length +
-                "} " + super.toString();
-    }
+
 }
