@@ -13,7 +13,7 @@ public class Silencer extends Decorator {
         return firearm.getWeight()+0.1;
     }
     public String getName() {
-        return firearm.getName() + "+silencer";
+        return firearm.getName() + "+Silencer";
     }
     public double getCaliber(){return  firearm.getCaliber();}
 
