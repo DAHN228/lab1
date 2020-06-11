@@ -1,4 +1,16 @@
 package dde3.lab1;
+import dde3.lab1.Decorator.LaserDesignator;
+import dde3.lab1.Decorator.Silencer;
+import dde3.lab1.Factory.WeaponFactory;
+import dde3.lab1.Hierarchy.Firearm;
+import dde3.lab1.Iterator.ArrayContainer;
+import dde3.lab1.Iterator.ArrayListContainer;
+import dde3.lab1.Iterator.Iterator;
+import dde3.lab1.Iterator.LinkedListContainer;
+import dde3.lab1.Threads.Store;
+import dde3.lab1.Threads.Thread1;
+import dde3.lab1.Threads.Thread2;
+
 import java.util.concurrent.Semaphore;
 
 
@@ -11,7 +23,7 @@ public class Main {
        Firearm RusPistol = RusWeaponFactory.createPistol();
        Firearm RusRifle = RusWeaponFactory.createRifle();
 
-        RusPistol = new Silencer (RusPistol);
+        RusPistol = new Silencer(RusPistol);
         RusRifle = new LaserDesignator(RusRifle);
 
        // System.out.println(RusPistol.toString());
